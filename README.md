@@ -21,42 +21,50 @@ It demonstrates understanding of IP addressing, routing, DNS resolution, and net
 | Phone   | 10.0.0.36   | Wi-Fi → Router | 20 (Guest/Untrusted) |  Ping successful to Internet |
 | Router  | 10.0.0.10   | LAN/WAN Gateway | N/A |  Ping failed from Laptop (accessible via browser) |
 
-**Subnet:** 10.0.0.0/24
-**Default Gateway:** 10.0.0.10
+- **Subnet:** 10.0.0.0/24
+- **Default Gateway:** 10.0.0.10
 
 ---
 
 ## Connectivity Testing Procedure
 
-### 1. Local Device Connectyivity
-**Test:** Laptop - Phone
-**Command:** ping 10.0.0.36
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/0a2c09b0-852d-4563-bea7-24c99f663cd7" />
+### 1. Local Device Connectivity
+- **Test:** Laptop - Phone
+- **Command:** ping 10.0.0.36
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/0a2c09b0-852d-4563-bea7-24c99f663cd7" /><
 
-**Results:** Successul replies
-**Meaning:** Local network communication is working.
+
+
+ _**Results:** Successful replies_
+ 
+ _**Meaning:** Local network communication is working._
 
 ### 2. Router Connectivity
-**Test:** Laptop - Router
-**Command:** ping 10.0.0.10
+- **Test:** Laptop - Router
+- **Command:** ping 10.0.0.10
+<img width="566" height="215" alt="image" src="https://github.com/user-attachments/assets/c962da2d-f047-44bd-96cf-39f0a09def6e" />
 
-
-**Results:** Request timed out
-**Meaning:** Router blocks ICMP requests (common security behavior).
+ _**Results:** Request timed out_
+ 
+ _**Meaning:** Router blocks ICMP requests (common security behavior)._
 
 ### 3. Internet Connectivity
-**Test:** Laptop - Public Internet
-**Command:** ping 8.8.8.8
+- **Test:** Laptop - Public Internet
+- **Command:** ping 8.8.8.8
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/30434f1f-11af-4a10-8c64-0eb79710579e" />
-**Results:** Successful replies
-**Meaning:** WAN routing and ISP connectivity are functioning.
+
+ _**Results:** Successful replies_
+ 
+ _**Meaning:** WAN routing and ISP connectivity are functioning._
 
 ### 4. DNS Resolution Test
-**Test:** Domain name resolution
-**Command:** ping google.com
+- **Test:** Domain name resolution
+- **Command:** ping google.com
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e4c8c323-9e6b-41cd-ac61-d6fa3b883489" />
-**Results:** Resolves to IP and replies recieved.
-**Meaning:** DNS services are working correctly.
+
+ _**Results:** Resolves to IP and replies recieved._
+  
+ _**Meaning:** DNS services are working correctly._
 
 ## Router Access Verification
 Router accessibility was verified via web browser:
@@ -66,7 +74,8 @@ The router login page loaded successfully, confirming:
  * Router is reachable.
  * Default gateway functioning.
  * Network routing operational.
-**Warning**: Browser displayed a security warning due to self-signed router certificate (normal for home routers).
+
+ _**Warning**: Browser displayed a security warning due to self-signed router certificate (normal for home routers)._
 
 ---
 
@@ -110,9 +119,9 @@ Laptop successfully communicated with phone, confirming internal LAN connectivit
 ### Internet & DNS Verification
 Successful ping to 8.8.8.8 and google.com confirmed:
 
-- WAN connectivity  
-- ISP routing  
-- DNS resolution functionality  
+* WAN connectivity  
+* ISP routing  
+* DNS resolution functionality  
 
 ---
 
@@ -122,10 +131,10 @@ This project successfully mapped and tested a home network using real device IP 
 
 Testing confirmed:
 
-✔ Internal LAN communication is operational  
-✔ Router functions correctly as the default gateway  
-✔ Internet connectivity through the ISP is active  
-✔ DNS resolution is working properly  
-✔ Security features such as SPI firewall may block ICMP while allowing normal traffic  
+* Internal LAN communication is operational  
+* Router functions correctly as the default gateway  
+* Internet connectivity through the ISP is active  
+* DNS resolution is working properly  
+* Security features such as SPI firewall may block ICMP while allowing normal traffic  
 
 The final network design demonstrates structured topology, VLAN awareness, and practical troubleshooting skills aligned with networking and cybersecurity best practices.
